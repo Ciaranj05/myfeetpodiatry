@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { Menu, Phone, X } from "lucide-react";
 import { useState } from "react";
@@ -42,18 +43,15 @@ export function SiteHeader() {
       </a>
       <header className="sticky top-0 z-50 border-b border-border/80 bg-[#faf8f5]/92 backdrop-blur-xl">
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-8">
-          <Link href="/" className="group flex items-center gap-3">
-            <span className="flex size-11 items-center justify-center rounded-lg border border-[#d9d3c8] bg-white text-lg font-semibold text-primary shadow-sm">
-              MF
-            </span>
-            <span className="leading-tight">
-              <span className="block font-heading text-xl text-foreground">
-                My Feet
-              </span>
-              <span className="block text-xs uppercase tracking-[0.28em] text-muted-foreground">
-                Podiatry
-              </span>
-            </span>
+          <Link href="/" className="group flex items-center">
+            <Image
+              src="/brand/myfeet-logo-color.svg"
+              alt="My Feet Podiatry"
+              className="h-12 w-auto sm:h-14"
+              width={195}
+              height={60}
+              priority
+            />
           </Link>
 
           <nav className="hidden items-center gap-8 lg:flex" aria-label="Main navigation">
@@ -136,7 +134,13 @@ export function SiteFooter() {
     <footer className="border-t border-border bg-[#262626] pb-24 text-white lg:pb-0">
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 sm:px-8 lg:grid-cols-[1.2fr_0.8fr_0.8fr]">
         <div>
-          <p className="font-heading text-3xl">My Feet Podiatry</p>
+          <Image
+            src="/brand/myfeet-logo-white.svg"
+            alt="My Feet Podiatry"
+            className="h-16 w-auto"
+            width={195}
+            height={60}
+          />
           <p className="mt-4 max-w-md text-sm leading-7 text-white/72">
             Expert foot and lower limb care in Ballymena, helping you stay active,
             comfortable and doing the things you love.
