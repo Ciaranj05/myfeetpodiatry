@@ -21,7 +21,7 @@ function BookingLink({
       target="_blank"
       rel="noreferrer"
       className={cn(
-        "inline-flex h-10 items-center justify-center rounded-lg bg-primary px-4 text-sm font-semibold text-primary-foreground shadow-sm transition hover:bg-[#697866] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
+        "inline-flex h-10 items-center justify-center rounded-lg bg-primary px-4 text-sm font-semibold text-primary-foreground shadow-sm transition hover:bg-[#579f99] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
         className,
       )}
     >
@@ -41,7 +41,7 @@ export function SiteHeader() {
       >
         Skip to content
       </a>
-      <header className="sticky top-0 z-50 border-b border-border/80 bg-[#faf8f5]/92 backdrop-blur-xl">
+      <header className="sticky top-0 z-50 border-b border-border/80 bg-[#f5fbfb]/92 backdrop-blur-xl">
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-8">
           <Link href="/" className="group flex items-center">
             <Image
@@ -131,7 +131,7 @@ export function SiteHeader() {
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-border bg-[#262626] pb-24 text-white lg:pb-0">
+    <footer className="border-t border-border bg-[#4d555b] pb-24 text-white lg:pb-0">
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 sm:px-8 lg:grid-cols-[1.2fr_0.8fr_0.8fr]">
         <div>
           <Image
@@ -147,7 +147,7 @@ export function SiteFooter() {
           </p>
         </div>
         <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#d9d3c8]">
+          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#d7efed]">
             Visit
           </p>
           <address className="mt-4 not-italic text-sm leading-7 text-white/72">
@@ -161,7 +161,7 @@ export function SiteFooter() {
           </address>
         </div>
         <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#d9d3c8]">
+          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#d7efed]">
             Book
           </p>
           <div className="mt-4 grid gap-2 text-sm text-white/72">
@@ -175,7 +175,7 @@ export function SiteFooter() {
               href={clinic.bookingUrl}
               target="_blank"
               rel="noreferrer"
-              className="font-semibold text-white hover:text-[#d9d3c8]"
+              className="font-semibold text-white hover:text-[#d7efed]"
             >
               Book online
             </a>

@@ -36,7 +36,7 @@ export default function AboutPage() {
         </section>
         <TrustStrip />
         <FounderStory />
-        <section className="bg-[#efe9df] px-5 py-24 sm:px-8">
+        <section className="bg-[#e8f6f5] px-5 py-24 sm:px-8">
           <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.8fr_1.2fr]">
             <Reveal>
               <SectionIntro

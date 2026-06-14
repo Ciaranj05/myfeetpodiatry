@@ -81,7 +81,7 @@ export function SectionFrame({
   const tones = {
     ivory: "bg-background",
     white: "bg-white",
-    stone: "bg-[#efe9df]",
+    stone: "bg-[#e8f6f5]",
   };
 
   return (
@@ -101,8 +101,8 @@ export function BookingButton({
   className?: string;
 }) {
   const variants = {
-    primary: "bg-primary text-white shadow-sm hover:bg-[#697866]",
-    light: "bg-white text-primary hover:bg-[#faf8f5]",
+    primary: "bg-primary text-white shadow-sm hover:bg-[#579f99]",
+    light: "bg-white text-primary hover:bg-[#f5fbfb]",
     outline:
       "border border-primary/30 bg-white text-primary hover:bg-primary hover:text-white",
   };
@@ -125,45 +125,34 @@ export function BookingButton({
 
 export function Hero() {
   return (
-    <section className="relative min-h-[calc(100svh-5rem)] border-b border-border bg-background">
-      <div className="absolute inset-0 subtle-texture opacity-45" />
-      <div className="mx-auto grid max-w-7xl gap-12 px-5 py-14 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:py-20">
-        <Reveal className="relative z-10 flex flex-col justify-center">
-          <Eyebrow>Foot health and movement clinic in Ballymena</Eyebrow>
-          <h1 className="font-heading text-6xl leading-[0.95] text-foreground sm:text-7xl lg:text-8xl">
-            Move With Confidence
+    <section className="relative flex min-h-[calc(100svh-5rem)] items-center overflow-hidden border-b border-border bg-[#c9eeec] px-5 py-16 sm:px-8 lg:py-24">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_15%,rgba(255,255,255,0.72),transparent_32%),radial-gradient(circle_at_82%_20%,rgba(255,255,238,0.62),transparent_30%),linear-gradient(135deg,#d9f5f3_0%,#afe1df_48%,#eef8ed_100%)]" />
+      <div className="absolute inset-0 opacity-35 [background-image:repeating-linear-gradient(112deg,transparent_0,transparent_34px,rgba(255,255,255,0.55)_35px,transparent_38px)]" />
+      <div className="relative z-10 mx-auto flex w-full max-w-5xl flex-col items-center text-center">
+        <Reveal className="flex flex-col items-center">
+          <Image
+            src="/brand/myfeet-logo-color.svg"
+            alt="My Feet Podiatry"
+            width={195}
+            height={60}
+            priority
+            className="mb-16 h-20 w-auto rounded-sm bg-white/88 px-4 py-3 shadow-[0_18px_50px_rgba(77,85,91,0.08)] sm:mb-20"
+          />
+          <h1 className="font-heading text-[clamp(3.75rem,10vw,7.6rem)] font-bold leading-[1.02] tracking-[-0.04em] text-black">
+            Foot Pain holding
+            <br />
+            you Back?
           </h1>
-          <p className="mt-7 max-w-xl text-lg leading-8 text-muted-foreground">
-            Expert foot and lower limb care in Ballymena, helping you stay active,
-            comfortable and doing the things you love.
+          <p className="mt-12 max-w-5xl font-heading text-[clamp(3rem,7.4vw,6.25rem)] font-normal leading-[1.08] tracking-[-0.055em] text-black">
+            Helping you move comfortably, stay active and enjoy life with healthy
+            feet.
           </p>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <BookingButton />
-            <a
-              href={`tel:${clinic.phone}`}
-              className="inline-flex h-12 items-center justify-center gap-2 rounded-lg border border-border bg-white px-6 text-sm font-semibold text-foreground transition hover:border-primary/40 hover:text-primary"
+          <div className="mt-20 w-full max-w-4xl">
+            <BookingButton
+              className="h-16 w-full rounded-[1.6rem] border-2 border-black bg-transparent text-xl font-medium text-black shadow-none hover:bg-black hover:text-white sm:text-2xl"
             >
-              <Phone className="size-4" />
-              Call Clinic
-            </a>
-          </div>
-        </Reveal>
-        <Reveal delay={0.12} className="relative z-10">
-          <div className="relative min-h-[520px] overflow-hidden rounded-lg bg-[#d9d3c8] shadow-[0_28px_90px_rgba(38,38,38,0.13)]">
-            <Image
-              src={imageLibrary.hero}
-              alt="Active older adult enjoying comfortable movement outdoors"
-              fill
-              priority
-              className="object-cover"
-              sizes="(min-width: 1024px) 55vw, 100vw"
-            />
-            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#262626]/55 to-transparent p-6 text-white">
-              <p className="max-w-sm text-sm leading-6">
-                Modern care with a personal touch, designed around your comfort,
-                mobility and confidence.
-              </p>
-            </div>
+              Book an appointment
+            </BookingButton>
           </div>
         </Reveal>
       </div>
@@ -232,7 +221,7 @@ export function TreatmentGrid({ detailed = false }: { detailed?: boolean }) {
               className="group h-full rounded-lg border border-border bg-white p-7 shadow-[0_18px_55px_rgba(38,38,38,0.05)] transition hover:-translate-y-1 hover:border-primary/30"
             >
               <div className="mb-7 flex items-center justify-between">
-                <span className="flex size-12 items-center justify-center rounded-lg bg-[#eff1ec] text-primary">
+                <span className="flex size-12 items-center justify-center rounded-lg bg-[#e8f6f5] text-primary">
                   <Icon className="size-6" />
                 </span>
                 <a
@@ -346,7 +335,7 @@ export function FounderStory({ compact = false }: { compact?: boolean }) {
     <SectionFrame>
       <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
         <Reveal>
-          <div className="relative aspect-[4/5] overflow-hidden rounded-lg bg-[#d9d3c8]">
+          <div className="relative aspect-[4/5] overflow-hidden rounded-lg bg-[#d7efed]">
             <Image
               src={imageLibrary.wellness}
               alt="Warm clinic consultation and wellness-led care"
@@ -408,7 +397,7 @@ export function ClinicExperience() {
           </div>
         </Reveal>
         <Reveal delay={0.08}>
-          <div className="relative aspect-[4/3] overflow-hidden rounded-lg bg-[#d9d3c8]">
+          <div className="relative aspect-[4/3] overflow-hidden rounded-lg bg-[#d7efed]">
             <Image
               src={imageLibrary.treatments}
               alt="Podiatry assessment in a calm modern clinic setting"
@@ -438,7 +427,7 @@ export function ReviewCarousel() {
           {reviews.map((review, index) => (
             <Reveal key={review.quote} delay={index * 0.05}>
               <article className="h-full rounded-lg border border-border bg-white p-6 shadow-[0_18px_55px_rgba(38,38,38,0.05)]">
-                <div className="mb-6 flex gap-1 text-[#a8865b]" aria-label="5 star review">
+                <div className="mb-6 flex gap-1 text-primary" aria-label="5 star review">
                   {Array.from({ length: 5 }).map((_, starIndex) => (
                     <Star key={starIndex} className="size-4 fill-current" />
                   ))}
@@ -657,7 +646,7 @@ export function MapSection() {
           </div>
         </Reveal>
         <Reveal delay={0.08}>
-          <div className="relative min-h-[420px] overflow-hidden rounded-lg border border-border bg-[#d9d3c8] subtle-texture">
+          <div className="relative min-h-[420px] overflow-hidden rounded-lg border border-border bg-[#d7efed] subtle-texture">
             <div className="absolute inset-6 rounded-lg border border-white/60 bg-white/72 p-8 shadow-[0_24px_70px_rgba(38,38,38,0.08)] backdrop-blur">
               <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary">
                 Map placeholder
@@ -723,7 +712,7 @@ export function ContactForm() {
             </label>
             <button
               type="submit"
-              className="mt-2 inline-flex h-12 items-center justify-center rounded-lg bg-primary px-6 text-sm font-semibold text-white transition hover:bg-[#697866]"
+              className="mt-2 inline-flex h-12 items-center justify-center rounded-lg bg-primary px-6 text-sm font-semibold text-white transition hover:bg-[#579f99]"
             >
               Request Callback
             </button>
